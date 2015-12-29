@@ -9,17 +9,17 @@ public enum SettlementEnum {
 
     private String name;
 
-    private int index;
+    private int value;
 
     // 构造方法
-    SettlementEnum(String name, int index) {
+    SettlementEnum(String name, int value) {
         this.name = name;
-        this.index = index;
+        this.value = value;
     }
 
-    public static String getName(int index) {
+    public static String getNameByValue(int value) {
         for (SettlementEnum c : SettlementEnum.values()) {
-            if (c.getIndex() == index) {
+            if (c.getValue() == value) {
                 return c.name;
             }
         }
@@ -35,11 +35,11 @@ public enum SettlementEnum {
         this.name = name;
     }
 
-    public int getIndex() {
-        return index;
+    public int getValue() {
+        return value;
     }
 
-    public void setIndex(int index) {
-        this.index = index;
+    public void setValue(int value) {
+        this.value = value;
     }
 }

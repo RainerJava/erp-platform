@@ -6,6 +6,7 @@ import javax.persistence.*;
 
 /**
  * Created by linjietao on 2015/12/21.
+ * 地址信息
  */
 @Entity
 @Table(name = "T_BD_Currency")

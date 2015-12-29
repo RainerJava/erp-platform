@@ -6,6 +6,7 @@ import javax.persistence.*;
 
 /**
  * Created by linjietao on 2015/12/22.
+ * 外部公司
  */
 @Entity
 @Table(name = "T_BD_Company")
@@ -35,11 +36,11 @@ public class Company extends BaseInfo {
     @JoinColumn(name = "FContactsID")
     private Contacts contacts;
 
-    public String geteMail() {
+    public String getEmail() {
         return eMail;
     }
 
-    public void seteMail(String eMail) {
+    public void setEmail(String eMail) {
         this.eMail = eMail;
     }
 

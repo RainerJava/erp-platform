@@ -13,6 +13,7 @@ import java.util.Map;
  */
 @MappedSuperclass
 public abstract class UuidEntity extends BaseEntity {
+
     private static final long serialVersionUID = 3223481584135690629L;
 
     @Id

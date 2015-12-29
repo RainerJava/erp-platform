@@ -31,6 +31,10 @@ public class User extends BaseInfo {
     @Column(name = "FUserType")
     private UserType userType;
 
+    public User() {
+        this.userType = UserType.Person;
+    }
+
     public String geteMail() {
         return eMail;
     }

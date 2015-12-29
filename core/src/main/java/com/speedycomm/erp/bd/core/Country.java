@@ -8,6 +8,7 @@ import javax.persistence.Table;
 
 /**
  * Created by linjietao on 2015/12/21.
+ * 行政单位国家
  */
 @Entity
 @Table(name = "T_BD_Country")

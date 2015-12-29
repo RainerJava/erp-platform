@@ -6,6 +6,7 @@ import javax.persistence.*;
 
 /**
  * Created by linjietao on 2015/12/21.
+ * 行政单位市/直辖市
  */
 @Entity
 @Table(name = "T_BD_City")
