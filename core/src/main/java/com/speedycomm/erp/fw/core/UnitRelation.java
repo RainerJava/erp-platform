@@ -1,7 +1,5 @@
 package com.speedycomm.erp.fw.core;
 
-import com.speedycomm.erp.fw.IDEntity;
-
 import javax.persistence.Column;
 import javax.persistence.MappedSuperclass;
 
@@ -10,7 +8,7 @@ import javax.persistence.MappedSuperclass;
  * 基础单元关系
  */
 @MappedSuperclass
-public abstract class BaseUnitRelation extends IDEntity {
+public abstract class UnitRelation extends BaseInfo {
 
     private static final long serialVersionUID = -3288847431639633788L;
 

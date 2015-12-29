@@ -1,4 +1,4 @@
-package com.speedycomm.erp.bd.core;
+package com.speedycomm.erp.pm.core;
 
 import com.speedycomm.erp.fw.core.UnitRelation;
 
@@ -6,35 +6,35 @@ import javax.persistence.*;
 
 /**
  * Created by linjietao on 15/12/29.
- * 物料关系表
+ * 角色关系
  */
 @Entity
-@Table(name = "T_BD_MaterialRelation")
-public class MaterialRelation extends UnitRelation {
+@Table(name = "T_PM_RoleRelation")
+public class RoleRelation extends UnitRelation {
 
-    private static final long serialVersionUID = -8734428729389824488L;
+    private static final long serialVersionUID = -3186087484747434288L;
 
     @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinColumn(name = "FChildID")
-    private Material child;
+    private Role child;
 
     @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinColumn(name = "FParentID")
-    private Material parent;
+    private Role parent;
 
-    public Material getChild() {
+    public Role getChild() {
         return child;
     }
 
-    public void setChild(Material child) {
+    public void setChild(Role child) {
         this.child = child;
     }
 
-    public Material getParent() {
+    public Role getParent() {
         return parent;
     }
 
-    public void setParent(Material parent) {
+    public void setParent(Role parent) {
         this.parent = parent;
     }
 }

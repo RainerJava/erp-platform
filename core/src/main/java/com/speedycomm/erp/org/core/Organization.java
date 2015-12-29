@@ -19,14 +19,25 @@ public class Organization extends BaseUnit {
     private static final long serialVersionUID = 2063745167190312546L;
 
     @Column(name = "FType")
-    private Integer type;
+    private int type;
 
-    public Integer getType() {
+    @Column(name = "FIsSealUp")
+    private boolean sealUp;
+
+    public int getType() {
         return type;
     }
 
-    public void setType(Integer type) {
+    public void setType(int type) {
         this.type = type;
+    }
+
+    public boolean isSealUp() {
+        return sealUp;
+    }
+
+    public void setSealUp(boolean sealUp) {
+        this.sealUp = sealUp;
     }
 
     @Transient

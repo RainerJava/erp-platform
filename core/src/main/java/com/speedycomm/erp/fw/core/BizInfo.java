@@ -1,9 +1,10 @@
 package com.speedycomm.erp.fw.core;
 
 import com.speedycomm.erp.fw.UuidEntity;
+import com.speedycomm.erp.org.core.ControlUnit;
+import com.speedycomm.erp.org.core.Organization;
 
 import javax.persistence.*;
-import java.security.Timestamp;
 
 /**
  * Created by linjietao on 2015/12/18.
@@ -14,61 +15,38 @@ public abstract class BizInfo extends UuidEntity {
 
     private static final long serialVersionUID = 4337453038067165845L;
 
-    @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "FBizDate")
-    private Timestamp bizDate;
+    @Column(name = "FIsFinished")
+    private boolean finished;
 
-    @Column(name = "FNumber", length = 64)
-    private String number;
+    @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @JoinColumn(name = "FOrganizationID")
+    private Organization organization;
 
-    @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "FCreateDateTime")
-    private Timestamp createDateTime;
+    @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @JoinColumn(name = "FControlUnitID")
+    private ControlUnit controlUnit;
 
-    @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "FUpdateDateTime")
-    private Timestamp updateDateTime;
-
-    @Column(name = "FIsVoucherGenerated")
-    private boolean isVoucherGenerated;
-
-    public Timestamp getBizDate() {
-        return bizDate;
+    public boolean isFinished() {
+        return finished;
     }
 
-    public void setBizDate(Timestamp bizDate) {
-        this.bizDate = bizDate;
+    public void setFinished(boolean finished) {
+        this.finished = finished;
     }
 
-    public String getNumber() {
-        return number;
+    public Organization getOrganization() {
+        return organization;
     }
 
-    public void setNumber(String number) {
-        this.number = number;
+    public void setOrganization(Organization organization) {
+        this.organization = organization;
     }
 
-    public Timestamp getCreateDateTime() {
-        return createDateTime;
+    public ControlUnit getControlUnit() {
+        return controlUnit;
     }
 
-    public void setCreateDateTime(Timestamp createDateTime) {
-        this.createDateTime = createDateTime;
-    }
-
-    public Timestamp getUpdateDateTime() {
-        return updateDateTime;
-    }
-
-    public void setUpdateDateTime(Timestamp updateDateTime) {
-        this.updateDateTime = updateDateTime;
-    }
-
-    public boolean isVoucherGenerated() {
-        return isVoucherGenerated;
-    }
-
-    public void setVoucherGenerated(boolean voucherGenerated) {
-        isVoucherGenerated = voucherGenerated;
+    public void setControlUnit(ControlUnit controlUnit) {
+        this.controlUnit = controlUnit;
     }
 }

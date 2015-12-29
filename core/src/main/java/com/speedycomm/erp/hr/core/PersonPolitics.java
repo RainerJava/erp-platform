@@ -1,6 +1,6 @@
 package com.speedycomm.erp.hr.core;
 
-import com.speedycomm.erp.fw.core.BaseUnitRelation;
+import com.speedycomm.erp.fw.core.UnitRelation;
 
 import javax.persistence.*;
 
@@ -10,7 +10,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "T_HR_PersonPolitics")
-public class PersonPolitics extends BaseUnitRelation {
+public class PersonPolitics extends UnitRelation {
 
     private static final long serialVersionUID = -7312603017952226093L;
 

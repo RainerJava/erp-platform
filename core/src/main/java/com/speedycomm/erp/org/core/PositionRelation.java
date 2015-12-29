@@ -1,6 +1,6 @@
 package com.speedycomm.erp.org.core;
 
-import com.speedycomm.erp.fw.core.BaseUnitRelation;
+import com.speedycomm.erp.fw.core.UnitRelation;
 
 import javax.persistence.*;
 
@@ -10,24 +10,24 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "T_ORG_Position")
-public class PositionRelation extends BaseUnitRelation {
+public class PositionRelation extends UnitRelation {
 
     private static final long serialVersionUID = 4916142977907535804L;
 
     @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-    @JoinColumn(name = "FItemID")
-    private Position item;
+    @JoinColumn(name = "FChildID")
+    private Position child;
 
     @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinColumn(name = "FParentID")
     private Position parent;
 
-    public Position getItem() {
-        return item;
+    public Position getChild() {
+        return child;
     }
 
-    public void setItem(Position item) {
-        this.item = item;
+    public void setChild(Position child) {
+        this.child = child;
     }
 
     public Position getParent() {

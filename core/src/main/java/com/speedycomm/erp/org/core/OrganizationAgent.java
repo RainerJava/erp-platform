@@ -19,11 +19,31 @@ public class OrganizationAgent extends OrganizationRelation {
     @Column(name = "FAgentType")
     private OrganizationType agentType;
 
+    private Organization agent;
+
+    private Organization byAgent;
+
     public OrganizationType getAgentType() {
         return agentType;
     }
 
     public void setAgentType(OrganizationType agentType) {
         this.agentType = agentType;
+    }
+
+    public Organization getAgent() {
+        return agent;
+    }
+
+    public void setAgent(Organization agent) {
+        this.agent = agent;
+    }
+
+    public Organization getByAgent() {
+        return byAgent;
+    }
+
+    public void setByAgent(Organization byAgent) {
+        this.byAgent = byAgent;
     }
 }

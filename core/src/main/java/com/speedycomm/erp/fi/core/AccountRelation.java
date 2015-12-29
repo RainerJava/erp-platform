@@ -1,6 +1,6 @@
 package com.speedycomm.erp.fi.core;
 
-import com.speedycomm.erp.fw.core.BaseUnitRelation;
+import com.speedycomm.erp.fw.core.UnitRelation;
 
 import javax.persistence.*;
 
@@ -9,24 +9,24 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "T_FI_AccountRelation")
-public class AccountRelation extends BaseUnitRelation {
+public class AccountRelation extends UnitRelation {
 
     private static final long serialVersionUID = -952391856265837137L;
 
     @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-    @JoinColumn(name = "FItemID")
-    private Account item;
+    @JoinColumn(name = "FChildID")
+    private Account child;
 
     @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinColumn(name = "FParentID")
     private Account parent;
 
-    public Account getItem() {
-        return item;
+    public Account getChild() {
+        return child;
     }
 
-    public void setItem(Account item) {
-        this.item = item;
+    public void setChild(Account child) {
+        this.child = child;
     }
 
     public Account getParent() {

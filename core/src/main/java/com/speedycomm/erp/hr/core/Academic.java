@@ -10,7 +10,7 @@ import javax.persistence.Table;
  * 学历
  */
 @Entity
-@Table(name = "T_BD_Academic")
+@Table(name = "T_HR_Academic")
 public class Academic extends BaseUnit {
 
     private static final long serialVersionUID = 6842745324352779573L;

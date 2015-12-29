@@ -13,15 +13,58 @@ public abstract class BaseUnit extends BaseInfo {
 
     private static final long serialVersionUID = -2745135025881186192L;
 
-    @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-    @JoinColumn(name = "FControlUnitID")
-    private ControlUnit controlUnit;
+    @Column(name = "FName", length = 64, nullable = false)
+    private String name;
 
-    public ControlUnit getControlUnit() {
-        return controlUnit;
+    @Column(name = "FNumber", length = 64, nullable = false, unique = true)
+    private String number;
+
+    @Column(name = "FSimpleName", length = 32)
+    private String simpleName;
+
+    @Column(name = "FDescription")
+    private String description;
+
+    @Column(name = "FIsEnabled")
+    private boolean enabled;
+
+    public String getName() {
+        return name;
     }
 
-    public void setControlUnit(ControlUnit controlUnit) {
-        this.controlUnit = controlUnit;
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getNumber() {
+        return number;
+    }
+
+    public void setNumber(String number) {
+        this.number = number;
+    }
+
+    public String getSimpleName() {
+        return simpleName;
+    }
+
+    public void setSimpleName(String simpleName) {
+        this.simpleName = simpleName;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public boolean isEnabled() {
+        return enabled;
+    }
+
+    public void setEnabled(boolean enabled) {
+        this.enabled = enabled;
     }
 }

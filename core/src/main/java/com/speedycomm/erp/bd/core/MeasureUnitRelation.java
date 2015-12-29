@@ -1,6 +1,6 @@
 package com.speedycomm.erp.bd.core;
 
-import com.speedycomm.erp.fw.core.BaseUnitRelation;
+import com.speedycomm.erp.fw.core.UnitRelation;
 
 import javax.persistence.*;
 
@@ -10,7 +10,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "T_BD_MaterialRelation")
-public class MeasureUnitRelation extends BaseUnitRelation {
+public class MeasureUnitRelation extends UnitRelation {
 
     private static final long serialVersionUID = 3979045150089427045L;
 
@@ -18,8 +18,8 @@ public class MeasureUnitRelation extends BaseUnitRelation {
     private double rate;
 
     @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-    @JoinColumn(name = "FItemID")
-    private Material item;
+    @JoinColumn(name = "FChildID")
+    private Material child;
 
     @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinColumn(name = "FParentID")
@@ -43,12 +43,12 @@ public class MeasureUnitRelation extends BaseUnitRelation {
         this.rate = rate;
     }
 
-    public Material getItem() {
-        return item;
+    public Material getChild() {
+        return child;
     }
 
-    public void setItem(Material item) {
-        this.item = item;
+    public void setChild(Material child) {
+        this.child = child;
     }
 
     public Material getParent() {
