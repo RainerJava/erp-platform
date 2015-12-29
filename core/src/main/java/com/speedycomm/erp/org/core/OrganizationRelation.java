@@ -1,4 +1,4 @@
-package com.speedycomm.erp.fi.core;
+package com.speedycomm.erp.org.core;
 
 import com.speedycomm.erp.fw.core.BaseInfoRelation;
 
@@ -6,34 +6,35 @@ import javax.persistence.*;
 
 /**
  * Created by linjietao on 15/12/29.
+ * 组织单元上下级关系
  */
 @Entity
-@Table(name = "T_FI_AccountRelation")
-public class AccountRelation extends BaseInfoRelation {
+@Table(name = "T_ORG_OrganizationRelation")
+public class OrganizationRelation extends BaseInfoRelation {
 
-    private static final long serialVersionUID = -952391856265837137L;
+    private static final long serialVersionUID = 8825937379632162031L;
 
     @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinColumn(name = "FItemID")
-    private Account item;
+    private Organization item;
 
     @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinColumn(name = "FParentID")
-    private Account parent;
+    private Organization parent;
 
-    public Account getItem() {
+    public Organization getItem() {
         return item;
     }
 
-    public void setItem(Account item) {
+    public void setItem(Organization item) {
         this.item = item;
     }
 
-    public Account getParent() {
+    public Organization getParent() {
         return parent;
     }
 
-    public void setParent(Account parent) {
+    public void setParent(Organization parent) {
         this.parent = parent;
     }
 }
