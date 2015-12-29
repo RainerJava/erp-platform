@@ -1,6 +1,6 @@
 package com.speedycomm.erp.bd.core;
 
-import com.speedycomm.erp.fw.core.BaseInfo;
+import com.speedycomm.erp.fw.core.BaseUnit;
 
 import javax.persistence.*;
 
@@ -10,7 +10,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "T_BD_Currency")
-public class Address extends BaseInfo {
+public class Address extends BaseUnit {
 
     private static final long serialVersionUID = -1232128952709558378L;
 
@@ -83,4 +83,5 @@ public class Address extends BaseInfo {
     public void setArea(Area area) {
         this.area = area;
     }
+
 }

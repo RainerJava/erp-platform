@@ -1,6 +1,6 @@
 package com.speedycomm.erp.bd.core;
 
-import com.speedycomm.erp.fw.core.BaseInfoRelation;
+import com.speedycomm.erp.fw.core.BaseUnitRelation;
 
 import javax.persistence.*;
 
@@ -10,7 +10,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "T_BD_MaterialRelation")
-public class MeasureUnitRelation extends BaseInfoRelation {
+public class MeasureUnitRelation extends BaseUnitRelation {
 
     private static final long serialVersionUID = 3979045150089427045L;
 

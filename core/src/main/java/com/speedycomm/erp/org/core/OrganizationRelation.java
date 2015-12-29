@@ -1,6 +1,6 @@
 package com.speedycomm.erp.org.core;
 
-import com.speedycomm.erp.fw.core.BaseInfoRelation;
+import com.speedycomm.erp.fw.core.BaseUnitRelation;
 
 import javax.persistence.*;
 
@@ -10,7 +10,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "T_ORG_OrganizationRelation")
-public class OrganizationRelation extends BaseInfoRelation {
+public class OrganizationRelation extends BaseUnitRelation {
 
     private static final long serialVersionUID = 8825937379632162031L;
 

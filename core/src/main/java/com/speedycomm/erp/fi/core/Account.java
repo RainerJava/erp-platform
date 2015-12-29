@@ -1,7 +1,7 @@
 package com.speedycomm.erp.fi.core;
 
 import com.speedycomm.erp.fi.BalanceDirection;
-import com.speedycomm.erp.fw.core.BaseInfo;
+import com.speedycomm.erp.fw.core.BaseUnit;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -13,7 +13,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "T_FI_Account")
-public class Account extends BaseInfo {
+public class Account extends BaseUnit {
 
     private static final long serialVersionUID = 8250031914629449694L;
 

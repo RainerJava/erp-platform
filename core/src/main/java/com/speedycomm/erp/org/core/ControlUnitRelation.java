@@ -1,6 +1,6 @@
 package com.speedycomm.erp.org.core;
 
-import com.speedycomm.erp.fw.core.BaseInfoRelation;
+import com.speedycomm.erp.fw.core.BaseUnitRelation;
 
 import javax.persistence.CascadeType;
 import javax.persistence.FetchType;
@@ -11,7 +11,7 @@ import javax.persistence.ManyToOne;
  * Created by linjietao on 15/12/29.
  * 控制单元上下级关系
  */
-public class ControlUnitRelation extends BaseInfoRelation {
+public class ControlUnitRelation extends BaseUnitRelation {
 
     private static final long serialVersionUID = 96919938055738538L;
 

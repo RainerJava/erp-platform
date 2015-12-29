@@ -1,6 +1,6 @@
 package com.speedycomm.erp.bd.core;
 
-import com.speedycomm.erp.fw.core.BaseInfo;
+import com.speedycomm.erp.fw.core.BaseUnit;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
@@ -11,6 +11,8 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "T_BD_MeasureUnitGroup")
-public class MeasureUnitGroup extends BaseInfo {
+public class MeasureUnitGroup extends BaseUnit {
+
     private static final long serialVersionUID = 5945778623230842096L;
+
 }

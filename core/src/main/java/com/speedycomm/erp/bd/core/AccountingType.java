@@ -1,10 +1,8 @@
 package com.speedycomm.erp.bd.core;
 
-import com.speedycomm.erp.fw.core.BaseInfo;
+import com.speedycomm.erp.fw.core.BaseUnit;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 /**
  * Created by linjietao on 15/12/29.
@@ -12,7 +10,8 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "T_BD_AccountingType")
-public class AccountingType extends BaseInfo {
+public class AccountingType extends BaseUnit {
+
     private static final long serialVersionUID = 8745337130586548069L;
 
     @Column(name = "FClassName", nullable = false, length = 64)
@@ -25,4 +24,5 @@ public class AccountingType extends BaseInfo {
     public void setClassName(String className) {
         this.className = className;
     }
+
 }

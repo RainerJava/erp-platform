@@ -1,17 +1,15 @@
 package com.speedycomm.erp.bd.core;
 
-import com.speedycomm.erp.fw.core.BaseInfo;
+import com.speedycomm.erp.fw.core.BaseUnit;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 /**
  * Created by linjietao on 2015/12/18.
  */
 @Entity
 @Table(name = "T_BD_Currency")
-public class Currency extends BaseInfo {
+public class Currency extends BaseUnit {
     private static final long serialVersionUID = 672349085635134403L;
 
     @Column(name = "FSymbol", length = 4)
@@ -24,4 +22,5 @@ public class Currency extends BaseInfo {
     public void setSymbol(String symbol) {
         this.symbol = symbol;
     }
+
 }

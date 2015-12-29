@@ -1,6 +1,6 @@
 package com.speedycomm.erp.bd.core;
 
-import com.speedycomm.erp.fw.core.BaseInfo;
+import com.speedycomm.erp.fw.core.BaseUnit;
 
 import javax.persistence.*;
 
@@ -10,7 +10,8 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "T_BD_BankAccount")
-public class BankAccount extends BaseInfo {
+public class BankAccount extends BaseUnit {
+
     private static final long serialVersionUID = 6319507546429044518L;
 
     @Column(name = "FAccount", nullable = false, length = 32)
@@ -35,4 +36,5 @@ public class BankAccount extends BaseInfo {
     public void setBank(Bank bank) {
         this.bank = bank;
     }
+
 }

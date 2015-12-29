@@ -17,7 +17,7 @@ public class User extends BaseInfo {
     private static final long serialVersionUID = -2820740737805499494L;
 
     @Column(name = "FEMail", length = 64)
-    private String eMail;
+    private String email;
 
     @Column(name = "FPhone", length = 32)
     private String phone;
@@ -36,11 +36,11 @@ public class User extends BaseInfo {
     }
 
     public String geteMail() {
-        return eMail;
+        return email;
     }
 
     public void seteMail(String eMail) {
-        this.eMail = eMail;
+        this.email = eMail;
     }
 
     public String getPhone() {

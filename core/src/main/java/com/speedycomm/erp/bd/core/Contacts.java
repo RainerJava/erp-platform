@@ -1,6 +1,6 @@
 package com.speedycomm.erp.bd.core;
 
-import com.speedycomm.erp.fw.core.BaseInfo;
+import com.speedycomm.erp.fw.core.BaseUnit;
 
 import javax.persistence.*;
 
@@ -9,12 +9,12 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "T_BD_Contacts")
-public class Contacts extends BaseInfo {
+public class Contacts extends BaseUnit {
 
     private static final long serialVersionUID = 4328156676822049749L;
 
     @Column(name = "FEMail", length = 64)
-    private String eMail;
+    private String email;
 
     @Column(name = "FPhone", length = 32)
     private String phone;
@@ -32,12 +32,12 @@ public class Contacts extends BaseInfo {
     @JoinColumn(name = "FAddressID")
     private Address address;
 
-    public String geteMail() {
-        return eMail;
+    public String getEmail() {
+        return email;
     }
 
-    public void seteMail(String eMail) {
-        this.eMail = eMail;
+    public void setEmail(String eMail) {
+        this.email = eMail;
     }
 
     public String getPhone() {
@@ -71,4 +71,5 @@ public class Contacts extends BaseInfo {
     public void setAddress(Address address) {
         this.address = address;
     }
+
 }

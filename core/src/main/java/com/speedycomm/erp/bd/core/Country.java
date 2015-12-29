@@ -1,10 +1,8 @@
 package com.speedycomm.erp.bd.core;
 
-import com.speedycomm.erp.fw.core.BaseInfo;
+import com.speedycomm.erp.fw.core.BaseUnit;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 /**
  * Created by linjietao on 2015/12/21.
@@ -12,7 +10,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "T_BD_Country")
-public class Country extends BaseInfo {
+public class Country extends BaseUnit {
 
     private static final long serialVersionUID = -4503133102158915728L;
 
@@ -37,4 +35,5 @@ public class Country extends BaseInfo {
     public void setTelephoneCode(String telephoneCode) {
         this.telephoneCode = telephoneCode;
     }
+
 }

@@ -1,6 +1,6 @@
 package com.speedycomm.erp.bd.core;
 
-import com.speedycomm.erp.fw.core.BaseInfo;
+import com.speedycomm.erp.fw.core.BaseUnit;
 
 import javax.persistence.*;
 
@@ -10,7 +10,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "T_BD_Province")
-public class Province extends BaseInfo {
+public class Province extends BaseUnit {
 
     private static final long serialVersionUID = -3863504374830483392L;
 

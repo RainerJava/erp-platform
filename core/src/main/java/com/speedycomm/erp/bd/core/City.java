@@ -1,6 +1,6 @@
 package com.speedycomm.erp.bd.core;
 
-import com.speedycomm.erp.fw.core.BaseInfo;
+import com.speedycomm.erp.fw.core.BaseUnit;
 
 import javax.persistence.*;
 
@@ -10,7 +10,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "T_BD_City")
-public class City extends BaseInfo {
+public class City extends BaseUnit {
     private static final long serialVersionUID = -3871759868369467239L;
 
     @Column(name = "FZipCode", length = 16)
@@ -58,4 +58,5 @@ public class City extends BaseInfo {
     public void setProvince(Province province) {
         this.province = province;
     }
+
 }

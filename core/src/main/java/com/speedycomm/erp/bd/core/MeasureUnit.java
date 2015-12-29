@@ -1,6 +1,6 @@
 package com.speedycomm.erp.bd.core;
 
-import com.speedycomm.erp.fw.core.BaseInfo;
+import com.speedycomm.erp.fw.core.BaseUnit;
 
 import javax.persistence.*;
 
@@ -10,15 +10,19 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "T_BD_MeasureUnit")
-public class MeasureUnit extends BaseInfo {
+public class MeasureUnit extends BaseUnit {
 
     private static final long serialVersionUID = -5605741078317974901L;
 
     @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-    @JoinColumn()
-    private MeasureUnit parent;
-
-    @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinColumn(name = "FMeasureUnitGroupID")
     private MeasureUnitGroup measureUnitGroup;
+
+    public MeasureUnitGroup getMeasureUnitGroup() {
+        return measureUnitGroup;
+    }
+
+    public void setMeasureUnitGroup(MeasureUnitGroup measureUnitGroup) {
+        this.measureUnitGroup = measureUnitGroup;
+    }
 }

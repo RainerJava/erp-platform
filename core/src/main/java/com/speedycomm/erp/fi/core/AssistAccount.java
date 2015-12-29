@@ -1,7 +1,7 @@
 package com.speedycomm.erp.fi.core;
 
 import com.speedycomm.erp.fi.BalanceDirection;
-import com.speedycomm.erp.fw.core.BaseInfo;
+import com.speedycomm.erp.fw.core.BaseUnit;
 
 import javax.persistence.*;
 
@@ -11,7 +11,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "T_FI_AssistAccount")
-public class AssistAccount extends BaseInfo {
+public class AssistAccount extends BaseUnit {
 
     private static final long serialVersionUID = 1835891858809216026L;
 

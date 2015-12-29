@@ -2,7 +2,7 @@ package com.speedycomm.erp.hr.core;
 
 import com.speedycomm.erp.bd.Gender;
 import com.speedycomm.erp.bd.core.Address;
-import com.speedycomm.erp.fw.core.BaseInfo;
+import com.speedycomm.erp.fw.core.BaseUnit;
 import com.speedycomm.erp.pm.core.User;
 
 import javax.persistence.*;
@@ -12,7 +12,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "T_HR_Person")
-public class Person extends BaseInfo {
+public class Person extends BaseUnit {
 
     private static final long serialVersionUID = 911854304894999511L;
 
@@ -20,7 +20,7 @@ public class Person extends BaseInfo {
     private Gender gender;
 
     @Column(name = "FEMail", length = 64)
-    private String eMail;
+    private String email;
 
     @Column(name = "FPhone", length = 32)
     private String phone;
@@ -45,11 +45,11 @@ public class Person extends BaseInfo {
     }
 
     public String geteMail() {
-        return eMail;
+        return email;
     }
 
     public void seteMail(String eMail) {
-        this.eMail = eMail;
+        this.email = eMail;
     }
 
     public String getPhone() {

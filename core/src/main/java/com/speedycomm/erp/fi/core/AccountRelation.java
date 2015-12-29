@@ -1,6 +1,6 @@
 package com.speedycomm.erp.fi.core;
 
-import com.speedycomm.erp.fw.core.BaseInfoRelation;
+import com.speedycomm.erp.fw.core.BaseUnitRelation;
 
 import javax.persistence.*;
 
@@ -9,7 +9,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "T_FI_AccountRelation")
-public class AccountRelation extends BaseInfoRelation {
+public class AccountRelation extends BaseUnitRelation {
 
     private static final long serialVersionUID = -952391856265837137L;
 
