@@ -1,6 +1,6 @@
 package com.speedycomm.erp.fw.core;
 
-import com.speedycomm.erp.fw.UuidEntity;
+import com.speedycomm.erp.fw.IDEntity;
 
 import javax.persistence.Column;
 import javax.persistence.MappedSuperclass;
@@ -10,70 +10,50 @@ import javax.persistence.MappedSuperclass;
  * 基础单元关系
  */
 @MappedSuperclass
-public abstract class BaseUnitRelation extends UuidEntity {
+public abstract class BaseUnitRelation extends IDEntity {
 
     private static final long serialVersionUID = -3288847431639633788L;
 
-    @Column(name = "FRate", scale = 3)
-    private double rate;
+    @Column(name = "FNumber", length = 128)
+    private String number;
 
-    @Column(name = "FItemLongNumber", length = 128)
-    private String itemLongNumber;
-
-    @Column(name = "FItemLongNumber", length = 128)
-    private String parentLongNumber;
+    @Column(name = "FPrimary")
+    private boolean primary;
 
     /**
-     * 获得根/叶子实体的换算比例
-     *
-     * @return 根/叶子实体的换算比例
-     */
-    public double getRate() {
-        return rate;
-    }
-
-    /**
-     * 设置根/叶子实体的换算比例
-     *
-     * @param rate 要设置的根/叶子实体换算比例
-     */
-    public void setRate(double rate) {
-        this.rate = rate;
-    }
-
-    /**
-     * 获得叶子实体的长编码
+     * 获得实体的查询编码
      *
      * @return 叶子实体的长编码
      */
-    public String getItemLongNumber() {
-        return itemLongNumber;
+    public String getNumber() {
+        return number;
     }
 
     /**
-     * 设置叶子实体的长编码
+     * 设置实体的查询编码
      *
-     * @param itemLongNumber 要设置的叶子实体长编码
+     * @param number 要设置的实体查询编码
      */
-    public void setItemLongNumber(String itemLongNumber) {
-        this.itemLongNumber = itemLongNumber;
+    public void setNumber(String number) {
+        this.number = number;
     }
 
     /**
-     * 获得根实体的长编码
+     * 获得实体的是否是根节点缺省设置
      *
-     * @return 根实体的长编码
+     * @return 叶子实体的长编码
      */
-    public String getParentLongNumber() {
-        return parentLongNumber;
+    public boolean isPrimary() {
+        return primary;
     }
 
     /**
-     * 设置根实体的长编码
+     * 设置叶子实体的是根节点缺省设置
      *
-     * @param parentLongNumber 要设置的根实体长编码
+     * @param primary 要设置的实体是根节点缺省设置
      */
-    public void setParentLongNumber(String parentLongNumber) {
-        this.parentLongNumber = parentLongNumber;
+    public void setPrimary(boolean primary) {
+        this.primary = primary;
     }
+
 }

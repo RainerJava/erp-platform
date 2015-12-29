@@ -1,27 +1,17 @@
 package com.speedycomm.erp.bd.application;
 
 import com.speedycomm.erp.bd.core.Currency;
-
-import java.util.List;
+import com.speedycomm.erp.fw.application.BaseUnitApi;
+import org.dayatang.utils.Page;
 
 /**
  * Created by linjietao on 2015/12/21.
  */
-public interface CurrencyApi {
+public interface CurrencyApi extends BaseUnitApi {
 
-    Currency getCurrencyInfo(String id);
+    Currency get(String id);
 
-    List<Currency> getCurrencySet(String[] ids);
+    Page<Currency> pagingQuery(int pageIndex, int pageSize, Currency queryEntity);
 
-    List<Currency> getCurrencySet(Currency queryInfo);
-
-    Currency saveCurrencyInfo(String id);
-
-    boolean removeCurrencyInfo(String id);
-
-    int removeCurrencySet(String[] ids);
-
-    boolean deleteCurrencyInfo(String id);
-
-    int deleteCurrencySet(String[] ids);
+    Currency save(Currency entity);
 }

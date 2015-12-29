@@ -10,7 +10,7 @@ public interface CurrencyFacade {
 
     CurrencyInfo get(String id);
 
-    Page<CurrencyInfo> pagingQuery(long page, int pageSize, CurrencyInfo queryInfo);
+    Page<CurrencyInfo> pagingQuery(int pageIndex, int pageSize, CurrencyInfo queryInfo);
 
     boolean save(CurrencyInfo currencyInfo);
 

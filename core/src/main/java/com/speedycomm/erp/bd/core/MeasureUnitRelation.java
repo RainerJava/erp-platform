@@ -14,6 +14,9 @@ public class MeasureUnitRelation extends BaseUnitRelation {
 
     private static final long serialVersionUID = 3979045150089427045L;
 
+    @Column(name = "FRate", scale = 3)
+    private double rate;
+
     @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinColumn(name = "FItemID")
     private Material item;
@@ -21,6 +24,24 @@ public class MeasureUnitRelation extends BaseUnitRelation {
     @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinColumn(name = "FParentID")
     private Material parent;
+
+    /**
+     * 获得根/叶子实体的换算比例
+     *
+     * @return 根/叶子实体的换算比例
+     */
+    public double getRate() {
+        return rate;
+    }
+
+    /**
+     * 设置根/叶子实体的换算比例
+     *
+     * @param rate 要设置的根/叶子实体换算比例
+     */
+    public void setRate(double rate) {
+        this.rate = rate;
+    }
 
     public Material getItem() {
         return item;

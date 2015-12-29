@@ -21,19 +21,14 @@ public class CurrencyFacadeImpl implements CurrencyFacade {
     private CurrencyApi currencyApi;
 
     public CurrencyInfo get(String id) {
-        Currency currency = currencyApi.getCurrencyInfo(id);
+        Currency currency = currencyApi.get(id);
         CurrencyInfo currencyInfo = new CurrencyInfo(currency);
         return currencyInfo;
     }
 
-    public Page<CurrencyInfo> pagingQuery(long page, int pageSize, CurrencyInfo queryInfo) {
-        List<Currency> lst = currencyApi.getCurrencySet(queryInfo.toEntity());
-        List<CurrencyInfo> lstInfo = new ArrayList<>();
-        for (Currency currency : lst) {
-            lstInfo.add(new CurrencyInfo(currency));
-        }
-        Page<CurrencyInfo> resultList = new Page(page, 0L, pageSize, lstInfo);
-        return resultList;
+    public Page<CurrencyInfo> pagingQuery(int pageIndex, int pageSize, CurrencyInfo queryInfo) {
+        Page<Currency> entities = currencyApi.pagingQuery(pageIndex, pageSize, queryInfo.toEntity());
+        return null;
     }
 
     public boolean save(CurrencyInfo currencyInfo) {

@@ -1,4 +1,4 @@
-package com.speedycomm.erp.bd.facade;
+package com.speedycomm.erp.fw.facade;
 
 import com.speedycomm.erp.bd.Gender;
 
