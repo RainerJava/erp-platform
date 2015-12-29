@@ -41,7 +41,7 @@ public class Organization extends BaseUnit {
     }
 
     @Transient
-    public boolean isType(OrganizationType organizationType) {
+    public boolean equalType(OrganizationType organizationType) {
         return (this.type & organizationType.getValue())==0 ? false: true;
     }
 }

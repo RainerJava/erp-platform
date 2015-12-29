@@ -26,8 +26,8 @@ public class Voucher extends BizUnit {
     private int entriesSize;
 
     @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.MERGE, CascadeType.PERSIST})
-    @JoinColumn(name = "FAuthorID")
-    private Person author;
+    @JoinColumn(name = "FMakerID")
+    private Person maker;
 
     public BigDecimal getCreditAmount() {
         return creditAmount;
@@ -53,11 +53,11 @@ public class Voucher extends BizUnit {
         this.entriesSize = entriesSize;
     }
 
-    public Person getAuthor() {
-        return author;
+    public Person getMaker() {
+        return maker;
     }
 
-    public void setAuthor(Person author) {
-        this.author = author;
+    public void setMaker(Person maker) {
+        this.maker = maker;
     }
 }

@@ -28,7 +28,7 @@ public abstract class BizUnit extends BizInfo {
     private Timestamp updateDateTime;
 
     @Column(name = "FIsVoucherGenerated")
-    private boolean isVoucherGenerated;
+    private boolean voucherGenerated;
 
     public Timestamp getBizDate() {
         return bizDate;
@@ -63,11 +63,10 @@ public abstract class BizUnit extends BizInfo {
     }
 
     public boolean isVoucherGenerated() {
-        return isVoucherGenerated;
+        return voucherGenerated;
     }
 
     public void setVoucherGenerated(boolean voucherGenerated) {
-        isVoucherGenerated = voucherGenerated;
+        this.voucherGenerated = voucherGenerated;
     }
-
 }

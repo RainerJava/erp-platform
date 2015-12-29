@@ -1,10 +1,9 @@
 package com.speedycomm.erp.pm.core;
 
 import com.speedycomm.erp.fw.core.BaseInfo;
+import com.speedycomm.erp.rs.core.Resource;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 /**
  * Created by linjietao on 15/12/29.
@@ -19,11 +18,23 @@ public class Authority extends BaseInfo {
     @Column(name = "FName", nullable = false, length = 32)
     private String name;
 
+    @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @JoinColumn(name = "FResourceID")
+    private Resource resource;
+
     public String getName() {
         return name;
     }
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Resource getResource() {
+        return resource;
+    }
+
+    public void setResource(Resource resource) {
+        this.resource = resource;
     }
 }

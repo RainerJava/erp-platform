@@ -16,11 +16,22 @@ public class ControlUnit extends BaseInfo {
 
     private static final long serialVersionUID = -9075229429919228341L;
 
+    @Column(name = "FIsEnabled")
+    private boolean enabled;
+
     @Column(name = "FIsSealUp")
     private boolean sealUp;
 
     public boolean isSealUp() {
         return sealUp;
+    }
+
+    public boolean isEnabled() {
+        return enabled;
+    }
+
+    public void setEnabled(boolean enabled) {
+        this.enabled = enabled;
     }
 
     public void setSealUp(boolean sealUp) {

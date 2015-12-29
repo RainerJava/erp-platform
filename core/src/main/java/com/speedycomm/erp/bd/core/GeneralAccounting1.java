@@ -10,7 +10,7 @@ import javax.persistence.Table;
  * 自定义核算项目1
  */
 @Entity
-@Table(name = "T_FI_GeneralAccounting6")
+@Table(name = "T_BD_GeneralAccounting6")
 public class GeneralAccounting1 extends BaseUnit {
     private static final long serialVersionUID = 239262227341257229L;
 }

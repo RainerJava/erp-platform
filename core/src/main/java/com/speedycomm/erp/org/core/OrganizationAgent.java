@@ -2,9 +2,7 @@ package com.speedycomm.erp.org.core;
 
 import com.speedycomm.erp.org.OrganizationType;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 /**
  * Created by linjietao on 15/12/29.
@@ -19,8 +17,12 @@ public class OrganizationAgent extends OrganizationRelation {
     @Column(name = "FAgentType")
     private OrganizationType agentType;
 
+    @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.MERGE, CascadeType.PERSIST})
+    @JoinColumn(name = "FAgentID")
     private Organization agent;
 
+    @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.MERGE, CascadeType.PERSIST})
+    @JoinColumn(name = "FBYAgentID")
     private Organization byAgent;
 
     public OrganizationType getAgentType() {

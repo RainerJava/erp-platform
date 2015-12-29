@@ -84,5 +84,4 @@ public class Customer extends BaseUnit {
         this.contacts = contacts;
     }
 
-
 }
