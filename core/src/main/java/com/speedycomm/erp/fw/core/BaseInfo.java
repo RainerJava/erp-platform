@@ -7,6 +7,7 @@ import javax.persistence.MappedSuperclass;
 
 /**
  * Created by linjietao on 2015/12/18.
+ * 基础数据
  */
 @MappedSuperclass
 public abstract class BaseInfo extends UuidEntity {

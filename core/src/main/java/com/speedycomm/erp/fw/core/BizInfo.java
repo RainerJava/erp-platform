@@ -7,6 +7,7 @@ import java.security.Timestamp;
 
 /**
  * Created by linjietao on 2015/12/18.
+ * 业务数据
  */
 @MappedSuperclass
 public abstract class BizInfo extends UuidEntity {

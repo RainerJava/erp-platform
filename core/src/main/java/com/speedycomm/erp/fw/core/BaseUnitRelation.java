@@ -7,9 +7,10 @@ import javax.persistence.MappedSuperclass;
 
 /**
  * Created by linjietao on 15/12/29.
+ * 基础单元关系
  */
 @MappedSuperclass
-public class BaseUnitRelation extends UuidEntity {
+public abstract class BaseUnitRelation extends UuidEntity {
 
     private static final long serialVersionUID = -3288847431639633788L;
 

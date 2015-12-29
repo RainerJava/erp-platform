@@ -7,6 +7,7 @@ import javax.persistence.*;
 
 /**
  * Created by linjietao on 15/12/29.
+ * 业务单元
  */
 @MappedSuperclass
 public abstract class BizUnit extends BizInfo {

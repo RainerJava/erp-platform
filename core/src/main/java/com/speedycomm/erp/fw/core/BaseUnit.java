@@ -6,6 +6,7 @@ import javax.persistence.*;
 
 /**
  * Created by linjietao on 15/12/29.
+ * 基础单元
  */
 @MappedSuperclass
 public abstract class BaseUnit extends BaseInfo {
